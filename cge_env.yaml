@@ -1,0 +1,11 @@
+name: cge_env
+channels:
+  - genomicepidemiology
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - cgeutil
+  - cgeisolate
+  - cgevirus
+  - cgemetagenomics

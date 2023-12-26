@@ -16,7 +16,7 @@
 ### Installing Ubuntu 22.04
 
 - **Method**: Boot the laptop from a USB stick with Ubuntu 22.04 LTS.
-- **Recommendation**: Use Rufus for creating a bootable USB stick with the Ubuntu 22.04 LTS ISO file.
+- **Recommendation**: Use Rufus from a windows pc for creating a bootable USB stick with the Ubuntu 22.04 LTS ISO file.
 - **Guidance**: Instructions for this process are readily available via a Google search.
 
 ### Kernel and Nvidia Drivers
@@ -64,7 +64,17 @@ sudo apt install nvidia-drivers-535
 sudo reboot
 # Verify nvidia-smi
 nvidia-smi
-# Install MinKnow-gpu-release
+# Install MinKnow-gpu-release from ONT community software website
+
+# Install git
+sudo apt install git
+# Install anaconda. Location should just be default path, so just press enter when prompted
+# When prompted to initialize conda, type yes
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-Linux-x86_64.sh
+bash Anaconda3-2023.09-Linux-x86_64.sh
+# You might need to restart your terminal for conda to work
+# Install mamba in base environment
+conda install -n base -c conda-forge mamba
 ```
 
 ## CGE analysis tools
@@ -76,6 +86,5 @@ Anaconda must be installed to run the CGE analysis tools. Installation of the to
 - cgemetagenomics (https://github.com/genomicepidemiology/cgemetagenomics). This tool is designed to analyse metagenomic samples containing microbes, not viruses.
 
 ## CGE analysis tools GUI
-
 
 
