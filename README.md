@@ -3,10 +3,12 @@ This README will serve as technical documentation for the Great-Life project. It
 
 ## Technical Stack
 
+The aim of this project is to deploy GPU-powered laptops with bioinformatics software for sequencing and analysis of microbial genomes. The technical stack is as follows:
+
 - **Ubuntu 22.04 LTS**: Operating system.
 - **ONT MinKnow-gpu-release**: For sequencing and basecalling.
-- **CGE Analysis Tools**: Conda packages for data analysis.
-- **CGE Analysis Tools GUI**: Electron application for a user-friendly interface.
+- **CGE Conda tools**: Conda packages for bioinformatics data analysis.
+- **CGELabs**: Electron application for a user-friendly interface.
 
 ## Laptop Setup
 
