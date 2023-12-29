@@ -90,6 +90,10 @@ nvidia-smi
 # Check MinKNOW is installed in the application menu
 # Install git for futures uses
 sudo apt install git
+# Download the cge conda environment file:
+wget https://cge.cbs.dtu.dk/services/CGELabs/cge_env.yml
+# Create the cge conda environment:
+conda env create -f cge_env.yml -n cge_env
 # Download the CGELabs setup script from the CGE server:
 wget https://cge.cbs.dtu.dk/services/CGELabs/setup.py
 # Run the setup script:
@@ -111,15 +115,42 @@ python3 cgelabs_dependency_check.py
 
 ```
 
-## CGE analysis tools
-CONTINUE HERE
+## CGELabs App
+For details on the CGELabs app, see the [CGELabs App](https://github.com/genomicepidemiology/CGELabs) repository.
 
-Anaconda must be installed to run the CGE analysis tools. Installation of the tools can be found in their respective github repos.
+## CGE analysis tools
+
+The following tools can be run from the CGELabs app:
 
 - cgeisolate (https://github.com/genomicepidemiology/cgeisolate). This tool is design to analyse bacterial isolates.
 - cgevirus (https://github.com/genomicepidemiology/cgevirus). This tool is designed to analyse viral genomes.
 - cgemetagenomics (https://github.com/genomicepidemiology/cgemetagenomics). This tool is designed to analyse metagenomic samples containing microbes, not viruses.
-- 
-## CGE analysis tools GUI
+
+All these tools are installed at once in the cge_env conda environment if the following steps are used:
+
+`wget https://cge.cbs.dtu.dk/services/CGELabs/cge_env.yml`
+
+`conda env create -f cge_env.yml -n cge_env`
+
+CGELabs requires all the tools to be installed in the cge_env conda environment. If the tools are installed in a different conda environment, CGELabs will not find them.
+
+### CGE analysis tools development
+
+For future development of the CGE tools the implementations can be made into the respective repositories. 
+When the newly developed features are tested and ready to be released, a new version of the conda package can be deployed to the CGE conda channel by following the steps below:
+
+`git add --a`
+
+`git commit -m "<version>"` #Should be major.minor.patch (e.g. 1.0.1)
+
+`git tag <version>` #Should be major.minor.patch (e.g. 1.0.1)
+
+`git push && git push --tags`
+
+The above commands will trigger a GitHub action that will build the conda package and deploy it to the CGE conda channel (anaconda.org/genomicepidemiology).
+
+Once the conda package is deployed, the cge_env on the deployed laptops can be updated by running the following command:
+
+`conda update --all -n cge_env`
 
 
