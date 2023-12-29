@@ -15,7 +15,8 @@ The aim of this project is to deploy GPU-powered laptops with bioinformatics sof
 ### Hardware Requirements
 
 - **RAM**: At least 32GB.
-- **GPU**: Nvidia GPU recommended. 
+- **GPU**: Nvidia GPU. 
+
 **Note**: HP Zbooks have been successfully used in our experience, however installing the correct NVIDIA drivers can be challenging. See below for more details.
 In January of 2024 we will experiment with the setup on a Dell computer, perhaps the process will be easier.
 
