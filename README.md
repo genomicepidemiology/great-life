@@ -91,23 +91,23 @@ nvidia-smi
 # Install git for futures uses
 sudo apt install git
 # Download the CGELabs setup script from the CGE server:
-`wget https://cge.cbs.dtu.dk/services/CGELabs/setup.py`
+wget https://cge.cbs.dtu.dk/services/CGELabs/setup.py
 # Run the setup script:
-`sudo python3 setup.py`
+sudo python3 setup.py
 # Download the cge_db from the CGE server:
-`wget https://cge.cbs.dtu.dk/services/CGELabs/cge_db.tar.gz`
+wget https://cge.cbs.dtu.dk/services/CGELabs/cge_db.tar.gz
 # Unpack the cge_db:
-`tar -xvf cge_db.tar.gz`
+tar -xvf cge_db.tar.gz
 # Move the cge_db to the CGELabs directory:
-`mv cge_db /var/lib/cge/database/cge_db`
+mv cge_db /var/lib/cge/database/cge_db
 # Download the CGELabs .deb file:
-`wget https://cge.cbs.dtu.dk/services/CGELabs/cge-labs_1.0.0-1_amd64.deb`
+wget https://cge.cbs.dtu.dk/services/CGELabs/cge-labs_1.0.0-1_amd64.deb
 # Install the CGELabs .deb file:
-`sudo dpkg -i cge-labs_1.0.0-1_amd64.deb`
+sudo dpkg -i cge-labs_1.0.0-1_amd64.deb
 # To check if all dependencies are installed correctly, download the dependency check script from the CGE server:
-`wget https://cge.cbs.dtu.dk/services/CGELabs/cgelabs_dependency_check.py`
+wget https://cge.cbs.dtu.dk/services/CGELabs/cgelabs_dependency_check.py
 # Execute the script:
-`python3 cgelabs_dependency_check.py`
+python3 cgelabs_dependency_check.py
 
 ```
 
