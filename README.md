@@ -127,7 +127,7 @@ The following tools can be run from the CGELabs app:
 
 - cgeisolate (https://github.com/genomicepidemiology/cgeisolate). This tool is design to analyse bacterial isolates.
 - cgevirus (https://github.com/genomicepidemiology/cgevirus). This tool is designed to analyse viral genomes.
-- cgemetagenomics (https://github.com/genomicepidemiology/cgemetagenomics). This tool is designed to analyse metagenomic samples containing microbes, not viruses.
+- cgemetagenomics (https://github.com/genomicepidemiology/cgemetagenomics). This tool is designed to analyse metagenomic samples containing microbes, not viruses. Primarily designed for surveillance of AMR.
 
 All these tools are installed at once in the cge_env conda environment if the following steps are used:
 
