@@ -100,7 +100,7 @@ conda env create -f cge_env.yml -n cge_env
 # Download the CGELabs setup script from the CGE server:
 wget https://cge.cbs.dtu.dk/services/CGELabs/setup.py
 # Run the setup script:
-sudo python3 setup.py
+sudo python3 setup_cge.py
 # Download the cge_db from the CGE server:
 wget https://cge.cbs.dtu.dk/services/CGELabs/cge_db.tar.gz
 # Unpack the cge_db:
