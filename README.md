@@ -14,11 +14,12 @@ The aim of this project is to deploy GPU-powered laptops with bioinformatics sof
 
 ### Hardware Requirements
 
+Recommended laptops are the Dell XPS 15. They work better with the NVIDIA driver than HP Zbooks.
+
 - **RAM**: At least 32GB.
 - **GPU**: Nvidia GPU. 
 
-**Note**: HP Zbooks have been successfully used in our experience, however installing the correct NVIDIA drivers can be challenging. See below for more details.
-In January of 2024 we will experiment with the setup on a Dell computer, perhaps the process will be easier.
+**Note**: HP Zbooks have been successfully used in our experience, however installing the correct NVIDIA drivers can be challenging. See below for more details. Recommended laptops are the Dell XPS 15. They work better with the NVIDIA driver than HP Zbooks.
 
 ### Installing Ubuntu 22.04
 
@@ -51,7 +52,7 @@ The NVIDIA driver MUST work for the basecalling of the Oxford Nanopore Software 
 ### ONT Software
 
 - **Download**: Acquire MinKnow-gpu-release from the ONT community software section. Follow the instructions for installation for ubuntu 22.
-
+Link: https://community.nanoporetech.com/posts/release-of-ubuntu-22-04-j
 ### Anaconda3 Installation
 
 - **Purpose**: Anaconda is used to create a Conda environment for the Great-Life project.
@@ -71,29 +72,17 @@ sudo apt upgrade
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
 bash Anaconda3-2022.05-Linux-x86_64.sh
 # Restart terminal by closing and reopening
-# Install Kernel 5.15.70 (if necessary. Here we simulate the kernel 5.15.70 installation process which will not be necessary if the default kernel works)
-# Download the 4 .deb files for Test amd64/build succeeded from https://kernel.ubuntu.com/mainline/v5.15.70/
-# Install the .deb files
-sudo dpkg -i *.deb
-# Modify grub to default to the 5.15.70 kernel
-sudo nano /etc/default/grub
-# Change GRUB_DEFAULT to "Advanced options for Ubuntu>Ubuntu, with Linux 5.15.70-051570-generic"
-# **NOTE**: Make sure the the above GRUB change is correct by checking the grub file in /boot/grub/grub.cfg: ` cat /boot/grub/grub.cfg | grep Linux 5.15`. The string inserted in the grub file dictates which kernel is used on boot. An incorrect/errornous string will cause the system to fail to boot.
-# Update grub
-sudo update-grub
-# Reboot
-sudo reboot
 # Install Nvidia drivers
 sudo apt install nvidia-drivers-535
 # Reboot
+# ***NOTE***: While rebooting go to the bios menu and disable secure boot (Likely f12 or f10 on boot)
 sudo reboot
-# Verify nvidia-smi
+# Verify nvidia-smi # This should work on the XPS dell laptops
 nvidia-smi
-# Install MinKnow-gpu-release from ONT community software website according to instructions
-# https://community.nanoporetech.com/posts/release-of-ubuntu-22-04-j for ubuntu 22.04 download of MinKNOW
-# Check MinKNOW is installed in the application menu
 # Install git for futures uses
 sudo apt install git
+# Install MinKnow-gpu-release from ONT community software website according to instructions
+# https://community.nanoporetech.com/posts/release-of-ubuntu-22-04-j for ubuntu 22.04 download of MinKNOW
 # Download the cge conda environment file:
 wget https://cge.food.dtu.dk/services/MINTyper/cge_env.yml
 # Create the cge conda environment:
@@ -107,7 +96,7 @@ wget https://cge.food.dtu.dk/services/MINTyper/cge_db.tar.gz
 # Unpack the cge_db:
 tar -xvf cge_db.tar.gz
 # Move the cge_db to the CGELabs directory:
-mv cge_db /var/lib/cge/database/cge_db
+sudo mv cge_db /var/lib/cge/database/cge_db
 # Download the CGELabs .deb file:
 wget https://cge.food.dtu.dk/services/MINTyper/cge-labs_1.0.0-1_amd64.deb
 # Install the CGELabs .deb file:
