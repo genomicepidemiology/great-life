@@ -90,6 +90,7 @@ sudo reboot
 # Verify nvidia-smi
 nvidia-smi
 # Install MinKnow-gpu-release from ONT community software website according to instructions
+# https://community.nanoporetech.com/posts/release-of-ubuntu-22-04-j for ubuntu 22.04 download of MinKNOW
 # Check MinKNOW is installed in the application menu
 # Install git for futures uses
 sudo apt install git
