@@ -15,7 +15,8 @@ directories = [
     "/var/lib/cge",
     "/var/lib/cge/results",
     "/var/lib/cge/database",
-    "/var/lib/cge/error_logs"
+    "/var/lib/cge/error_logs",
+    "/var/lib/cge/data"
 ]
 
 for dir_path in directories:

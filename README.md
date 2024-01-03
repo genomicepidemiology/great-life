@@ -84,25 +84,25 @@ sudo apt install git
 # Install MinKnow-gpu-release from ONT community software website according to instructions
 # https://community.nanoporetech.com/posts/release-of-ubuntu-22-04-j for ubuntu 22.04 download of MinKNOW
 # Download the cge conda environment file:
-wget https://cge.food.dtu.dk/services/MINTyper/cge_env.yml
+wget https://cge.food.dtu.dk/services/great-life/cge_env.yml
 # Create the cge conda environment:
 conda env create -f cge_env.yml -n cge_env
 # Download the CGELabs setup script from the CGE server:
-wget https://cge.food.dtu.dk/services/MINTyper/setup_cge.py
+wget https://cge.food.dtu.dk/services/great-life/setup_cge.py
 # Run the setup script:
 sudo python3 setup_cge.py
 # Download the cge_db from the CGE server:
-wget https://cge.food.dtu.dk/services/MINTyper/cge_db.tar.gz
+wget https://cge.food.dtu.dk/services/great-life/cge_db.tar.gz
 # Unpack the cge_db:
 tar -xvf cge_db.tar.gz
 # Move the cge_db to the CGELabs directory:
 sudo mv cge_db /var/lib/cge/database/cge_db
 # Download the CGELabs .deb file:
-wget https://cge.food.dtu.dk/services/MINTyper/cge-labs_1.0.0-1_amd64.deb
+wget https://cge.food.dtu.dk/services/great-life/cge-labs_1.0.0_amd64.deb
 # Install the CGELabs .deb file:
-sudo dpkg -i cge-labs_1.0.0-1_amd64.deb
+sudo dpkg -i cge-labs_1.0.0_amd64.deb
 # To check if all dependencies are installed correctly, download the dependency check script from the CGE server:
-wget https://cge.food.dtu.dk/services/MINTyper/cgelabs_dependency_check.py
+wget https://cge.food.dtu.dk/services/great-life/cgelabs_dependency_check.py
 # Execute the script:
 python3 cgelabs_dependency_check.py
 
@@ -121,7 +121,7 @@ The following tools can be run from the CGELabs app:
 
 All these tools are installed at once in the cge_env conda environment if the following steps are used:
 
-`wget https://cge.food.dtu.dk/services/MINTyper/cge_env.yml`
+`wget https://cge.food.dtu.dk/services/great-life/cge_env.yml`
 
 `conda env create -f cge_env.yml -n cge_env`
 
