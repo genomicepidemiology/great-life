@@ -147,6 +147,6 @@ The above commands will trigger a GitHub action that will build the conda packag
 Once the conda package is deployed, the cge_env on the deployed laptops can be updated by running the following command:
 
 `conda update --all -n cge_env -c genomicepidemiology`
-.
+
 
 
