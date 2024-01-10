@@ -98,13 +98,15 @@ tar -xvf cge_db.tar.gz
 # Move the cge_db to the CGELabs directory:
 sudo mv cge_db /var/lib/cge/database/cge_db
 # Download the CGELabs .deb file:
-wget https://cge.food.dtu.dk/services/great-life/cge-labs_1.0.0_amd64.deb
+wget https://cge.food.dtu.dk/services/great-life/CGELabs_1.0.0_amd64.deb
 # Install the CGELabs .deb file:
 sudo dpkg -i cge-labs_1.0.0_amd64.deb
 # To check if all dependencies are installed correctly, download the dependency check script from the CGE server:
 wget https://cge.food.dtu.dk/services/great-life/cgelabs_dependency_check.py
 # Execute the script:
 python3 cgelabs_dependency_check.py
+# Restart the laptop (Often MinKNOW needs a restart to work properly, otherwise it might not be able to detect the minion sequencer)
+sudo reboot
 
 ```
 
