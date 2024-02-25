@@ -1,6 +1,13 @@
 # Great-Life Project: Laptop and ONT Software Setup Guide
 This README will serve as technical documentation for the Great-Life project. It will be updated as the project progresses.
 
+## Quick links
+
+CGELabs: [CGELabs](https://github.com/genomicepidemiology/CGELabs)
+CGE isolate: [CGE isolate](https://github.com/genomicepidemiology/cgeisolate)
+CGE virus: [CGE virus](https://github.com/genomicepidemiology/cgevirus)
+CGE metagenommics: [CGE metagenomics](https://github.com/genomicepidemiology/metagenomics)
+ 
 ## Technical Stack
 
 The aim of this project is to deploy GPU-powered laptops with bioinformatics software for sequencing and analysis of microbial genomes. The technical stack is as follows:
