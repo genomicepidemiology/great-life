@@ -3,10 +3,13 @@ This README will serve as technical documentation for the Great-Life project. It
 
 ## Quick links
 
-CGELabs: [CGELabs](https://github.com/genomicepidemiology/CGELabs)
-CGE isolate: [CGE isolate](https://github.com/genomicepidemiology/cgeisolate)
-CGE virus: [CGE virus](https://github.com/genomicepidemiology/cgevirus)
-CGE metagenommics: [CGE metagenomics](https://github.com/genomicepidemiology/metagenomics)
+-CGELabs: [CGELabs](https://github.com/genomicepidemiology/CGELabs)
+
+-CGE isolate: [CGE isolate](https://github.com/genomicepidemiology/cgeisolate)
+
+-CGE virus: [CGE virus](https://github.com/genomicepidemiology/cgevirus)
+
+-CGE metagenommics: [CGE metagenomics](https://github.com/genomicepidemiology/metagenomics)
  
 ## Technical Stack
 
